@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApplication6.Models.JobTitle>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Meslek Grupları</h2>
+<hr />
+<h6>Meslek ayrıntıları istenme olasılığını düşük gördüğüm için eklemedim.</h6>
+<hr />
+<p>
+    @Html.ActionLink("Meslek Ekle", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Meslek Adı
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobName)
+        </td>
+        <td>
+            @Html.ActionLink("Sil", "Delete", new { id=item.JobTitleId }, new { @class = "btn btn-danger btn-xs" })
+        </td>
+    </tr>
+}
+
+</table>

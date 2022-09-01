@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogurtcu Mithat</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="~/Home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Kurum İşlemleri</a>
+                        <div class="dropdown-content">
+                            <a>@Html.ActionLink("Personel İşlemleri", "Index", "Personels")</a>
+                            <a>@Html.ActionLink("Konum İşlemleri", "Index", "Location")</a>
+                            <a>@Html.ActionLink("Meslek Grubu İşlemleri", "Index", "JobTitles")</a>
+                            <a>@Html.ActionLink("Vardiya İşlemleri", "Index", "Time")</a>
+                        </div>
+                    </li>
+                    <li><a href="~/Map">Harita</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>Proje</p>
+        </footer>
+    </div>
+
+
+    <li></li>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

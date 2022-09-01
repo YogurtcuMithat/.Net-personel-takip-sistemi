@@ -1,0 +1,46 @@
+﻿@model WebApplication6.Models.TimeRotation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Vardiya Silme</h2>
+<h4>Vardiya azaltıyoruz.</h4>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Vardiya Adı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeRotationName)
+        </dd>
+
+        <dt>
+            Başlangıç Saati
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStart)
+        </dd>
+
+        <dt>
+            Bitiş Saati
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeEnd)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Vazgeç", "Index")
+        </div>
+    }
+</div>

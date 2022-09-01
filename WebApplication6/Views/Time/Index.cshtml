@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebApplication6.Models.TimeRotation>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Vardiya Ayarları</h2>
+<hr />
+
+<p>
+    @Html.ActionLink("Vardiya Ekle", "Create",null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Vardiya Adı
+        </th>
+        <th>
+            Vardiya Başlangıcı
+        </th>
+        <th>
+            Vardiya Sonu
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeRotationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeEnd)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.TimeRotationId }, new { @class = "btn btn-warning btn-xs" }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.TimeRotationId }, new { @class = "btn btn-danger btn-xs" })
+        </td>
+    </tr>
+}
+
+</table>

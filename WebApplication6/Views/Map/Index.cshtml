@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    #GFG_DIV {
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        background: green;
+        height: 25px;
+        width: 25px;
+        margin: 0 auto;
+        color: white;
+    }
+</style>
+<h2>Konum Bilgisi</h2>
+<hr />
+<button onClick="GFG_Fun()">
+    Similasyonu başlat
+</button>
+<div id="GFG_DIV"></div>
+<img src="~/Images/Map.svg" />
+<script>
+    let el_up = document.getElementById("GFG_UP");
+    var Left = [508, 708, 910, 868,770,790,805,925,980,1020,1070,1205,1270,1416,1580];
+    var Top = [850, 700, 530 , 480,370,380,408,540,637,707,756,731,700,611,490];
+    var el = document.getElementById('GFG_DIV');
+    el.style.position = "absolute";
+
+    function GFG_Fun() {
+        setTimeout(function () { el.style.left = Left[0] + 'px'; el.style.top = Top[0] + 'px'; }, 2000);
+        setTimeout(function () { el.style.left = Left[1] + 'px'; el.style.top = Top[1] + 'px'; }, 4000);
+        setTimeout(function () { el.style.left = Left[2] + 'px'; el.style.top = Top[2] + 'px'; }, 6000);
+        setTimeout(function () { el.style.left = Left[3] + 'px'; el.style.top = Top[3] + 'px'; }, 8000);
+        setTimeout(function () { el.style.left = Left[4] + 'px'; el.style.top = Top[4] + 'px'; }, 10000);
+        setTimeout(function () { el.style.left = Left[5] + 'px'; el.style.top = Top[5] + 'px'; }, 12000);
+        setTimeout(function () { el.style.left = Left[6] + 'px'; el.style.top = Top[6] + 'px'; }, 14000);
+        setTimeout(function () { el.style.left = Left[7] + 'px'; el.style.top = Top[7] + 'px'; }, 16000);
+        setTimeout(function () { el.style.left = Left[8] + 'px'; el.style.top = Top[8] + 'px'; }, 18000);
+        setTimeout(function () { el.style.left = Left[9] + 'px'; el.style.top = Top[9] + 'px'; }, 20000);
+        setTimeout(function () { el.style.left = Left[10] + 'px'; el.style.top = Top[10] + 'px'; }, 22000);
+        setTimeout(function () { el.style.left = Left[11] + 'px'; el.style.top = Top[11] + 'px'; }, 24000);
+        setTimeout(function () { el.style.left = Left[12] + 'px'; el.style.top = Top[12] + 'px'; }, 26000);
+        setTimeout(function () { el.style.left = Left[13] + 'px'; el.style.top = Top[13] + 'px'; }, 28000);
+        setTimeout(function () { el.style.left = Left[14] + 'px'; el.style.top = Top[14] + 'px'; }, 30000);
+    }
+</script>

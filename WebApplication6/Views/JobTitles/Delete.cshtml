@@ -1,0 +1,30 @@
+﻿@model WebApplication6.Models.JobTitle
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Meslek Grubu Silme</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Meslek Adı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Vazgeç", "Index")
+        </div>
+    }
+</div>

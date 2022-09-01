@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebApplication6.Models.Location>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Yeni bir konum ekle", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Bulunulan Konum
+        </th>
+        <th>
+            Konumun derinliği (Metre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationDepth)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.LocationId }, new { @class = "btn btn-warning btn-xs" }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.LocationId }, new { @class = "btn btn-danger btn-xs" })
+        </td>
+    </tr>
+}
+
+</table>
